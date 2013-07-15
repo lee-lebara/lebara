@@ -123,8 +123,8 @@ function initCheckBoxes()
     });  
       
     //Recenter the popup on resize
-    $(window).resize_ml(function() {  
-    centerOverlay_ml();  
+    $(window).resize(function() {
+         centerOverlay_ml();
     });
 
 
@@ -150,8 +150,8 @@ function initCheckBoxes()
 	<h2 class="mylebara_header">Hi John</h2><div class="last_login_details">Last login: 12 Jun-2013</div>
 </div>
 
-    <!-- Adyen Payment Route -->
-	<div id="adyen-gateway" class="mylebara_primary_content">
+
+	<div  class="mylebara_primary_content">
         
         <div class="mylebara_content_box">
     	<div class="mylebara_content_box_header">Manage Top Up / Auto Renew</div>

@@ -109,8 +109,6 @@ function initCheckBoxes()
 
         var cbSliderSmall = $('.cb-slider_small');
 
-
-
         cbSliderSmall.each(function(){
 
             console.log(this);

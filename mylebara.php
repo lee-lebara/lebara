@@ -28,7 +28,7 @@ var leftDist = 30.75;
 function initCheckBoxes()
 {
     $( ".cb-slider_small" ).attr('is_active', false);   //to track if the slider was dragged completely and released outside
-    $( ".cb-slider_small" ).draggable({m
+    $( ".cb-slider_small" ).draggable({
          containment: "parent",
          stop: function(event, ui){
              //trigger a mouse up only if is_active is left at true
@@ -44,7 +44,7 @@ function initCheckBoxes()
     $(".cb-slider_small").mouseup(function(){
 
     var status = $(this).attr("cb-status");
-$(this).attr("is_active", true);
+
     switch(status)
     {
         case "0":
@@ -71,60 +71,118 @@ $(this).attr("is_active", true);
 
 <script>
 
-    function loadOverlay_ml(){  
-        //loads popup only if it is disabled  
-        if($("#bgOverlay_ml").data("state")==0){  
-            $("#bgOverlay_ml").css({  
-                "opacity": "0.7"  
-            });  
-            $("#bgOverlay_ml").fadeIn("medium");  
-            $("#overlay_ml").fadeIn("medium");  
-            $("#bgOverlay_ml").data("state",1);  
-        }  
-    }  
-      
-    function disableOverlay_ml(){  
-        if ($("#bgOverlay_ml").data("state")==1){  
-            $("#bgOverlay_ml").fadeOut("medium");  
-            $("#overlay_ml").fadeOut("medium");  
-            $("#bgOverlay_ml").data("state",0);  
-        }  
-    }  
-      
-    function centerOverlay_ml(){  
-        var owinw = $(window).width();  
-        var owinh = $(window).height();  
-        var opopw = $('#overlay_ml').width();  
-        var opoph = $('#overlay_ml').height();  
-        $("#overlay_ml").css({  
-            "position" : "absolute"
-        });  
-        //IE6  
-        $("#bgOverlay_ml").css({  
-            "height": owinh    
-        });  
+    function loadOverlay_ml(){
+        //loads popup only if it is disabled
+        if($("#bgOverlay_ml").data("state")==0){
+            $("#bgOverlay_ml").css({
+                "opacity": "0.7"
+            });
+            $("#bgOverlay_ml").fadeIn("medium");
+            $("#overlay_ml").fadeIn("medium");
+            $("#bgOverlay_ml").data("state",1);
+        }
+
+            var cbSlider = $(e.target).parent();
+
+            var cbSliderStatus = cbSlider.find(".cb-slider_small").attr("cb-status");
+
+            $(".overlayClose_ml_no").click(function(e){
+                disableOverlay_ml_no(e);
+            });
+
     }
 
-    $(document).ready(function() {  
-       $("#bgOverlay_ml").data("state",0);  
-       $("#overlay_trigger_ml").click(function(){  
-            centerOverlay_ml();  
-            loadOverlay_ml();     
-       });  
-       $(".overlayClose_ml").click(function(){  
-            disableOverlay_ml();  
-       });  
-       $(document).keypress(function(e){  
-            if(e.keyCode==27) {  
-                disableOverlay_ml();   
-            }  
-        });  
-    });  
-      
-    //Recenter the popup on resize
-    $(window).resize_ml(function() {  
-    centerOverlay_ml();  
+    function loadOverlay_ml2(e){
+
+            //loads popup only if it is disabled
+            if($("#bgOverlay_ml").data("state")==0){
+                $("#bgOverlay_ml").css({
+                    "opacity": "0.7"
+                });
+                $("#bgOverlay_ml").fadeIn("medium");
+                $("#overlay_ml2").fadeIn("medium");
+                $("#bgOverlay_ml").data("state",1);
+            }
+
+            var cbSlider = $(e.target).parent();
+
+            var cbSliderStatus = cbSlider.find(".cb-slider_small").attr("cb-status");
+
+            $(".overlayClose_ml_no").click(function(e){
+                disableOverlay_ml_no(e);
+            });
+
+
+        }
+
+    function disableOverlay_ml(e){
+
+        var save = e.target;
+
+        if ($("#bgOverlay_ml").data("state")==1){
+            $("#bgOverlay_ml").fadeOut("medium");
+            $("#overlay_ml").fadeOut("medium");
+            $("#overlay_ml2").fadeOut("medium");
+            $("#bgOverlay_ml").data("state",0);
+        }
+    }
+
+    function disableOverlay_ml_no(e){
+
+            var revert = e.target;
+
+            if ($("#bgOverlay_ml").data("state")==1){
+                $("#bgOverlay_ml").fadeOut("medium");
+                $("#overlay_ml").fadeOut("medium");
+                $("#overlay_ml2").fadeOut("medium");
+                $("#bgOverlay_ml").data("state",0);
+            }
+        }
+
+    function centerOverlay_ml(){
+        var owinw = $(window).width();
+        var owinh = $(window).height();
+        var opopw = $('#overlay_ml').width();
+        var opoph = $('#overlay_ml').height();
+        $("#overlay_ml").css({
+            "position" : "absolute"
+        });
+        //IE6
+        $("#bgOverlay_ml").css({
+            "height": owinh
+        });
+    }
+
+    $(document).ready(function() {
+       $("#bgOverlay_ml").data("state",0);
+
+
+       $(".overlay_trigger_ml").click(function(e){
+            centerOverlay_ml();
+            if($('#mypay-gateway').length>0){
+                loadOverlay_ml2(e);
+            } else{
+                loadOverlay_ml(e);
+            }
+       });
+
+       $(".overlayClose_ml").click(function(e){
+            disableOverlay_ml(e);
+       });
+
+       $(document).keypress(function(e){
+            if(e.keyCode==27) {
+                disableOverlay_ml();
+            }
+        });
     });
+
+    //Recenter the popup on resize
+    $(window).resize(function() {
+         centerOverlay_ml();
+    });
+
+
 </script>
 
 
@@ -138,9 +196,16 @@ $(this).attr("is_active", true);
 <div id="overlay_ml">
 	<p>Are you sure you want to make this change?:</p>     
 	<a class="overlayClose_ml">YES</a>
-    <a class="overlayClose_ml">NO</a>  
-</div> 
-  
+    <a class="overlayClose_ml_no">NO</a>
+</div>
+
+
+<div id="overlay_ml2">
+	<p>Are you sure you want to make this change? 2 :</p>
+	<a class="overlayClose_ml">YES</a>
+    <a class="overlayClose_ml_no">NO</a>
+</div>
+
 <div id="bgOverlay_ml"></div> 
 
 <h1 class="desktop_element product_header">My<span>Lebara</span></h1>
@@ -152,7 +217,7 @@ $(this).attr("is_active", true);
 	<h2 class="mylebara_header">Hi John</h2><div class="last_login_details">Last login: 12 Jun-2013</div>
 </div>
 
-	<div class="mylebara_primary_content">
+	<div id="mypay-gateway" class="mylebara_primary_content">
         
         <div class="mylebara_content_box">
     	<div class="mylebara_content_box_header">Manage Top Up / Auto Renew</div>
@@ -176,7 +241,7 @@ $(this).attr("is_active", true);
                     <div class="cb-slider_small" cb-status="0"></div>
                   </a>
                 </div>
-                <a class="mylebara_save_button">SAVE</a>
+                <a class="mylebara_save_button overlay_trigger_ml">SAVE</a>
               </td>
             </tr>
             <tr>
@@ -189,7 +254,7 @@ $(this).attr("is_active", true);
                     <div class="cb-slider_small" cb-status="0"></div>
                   </a>
                 </div>
-                <a class="mylebara_save_button">SAVE</a>
+                <a class="mylebara_save_button overlay_trigger_ml">SAVE</a>
               </td>
             </tr>
 
@@ -202,7 +267,7 @@ $(this).attr("is_active", true);
                     <div class="cb-slider_small" cb-status="0"></div>
                   </a>
                 </div>
-                <a class="mylebara_save_button">SAVE</a>
+                <a class="mylebara_save_button overlay_trigger_ml">SAVE</a>
               </td>
             </tr>
 

@@ -23,8 +23,6 @@ var monetateT = new Date().getTime();
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 
 
-
-
 <!-- Compiled Less stylesheet to CSS -->
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
@@ -43,10 +41,12 @@ var monetateT = new Date().getTime();
 
 <script type="text/javascript">
     $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        slideshow: true
-      });
+      if($('.flexslider').length>0){
+          $('.flexslider').flexslider({
+                 animation: "slide",
+                 slideshow: true
+          });
+      }
     });
 </script>
 
