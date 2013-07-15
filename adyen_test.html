@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript">
+        function formSubmit() {
+            if (getUrlParams() == true) {
+                document.AdyenTopUpForm.submit();
+            }
+            ;
+        }
+        ;
+
+        function getUrlParams() {
+            var params = new Array();
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
+                params[key] = value;
+                params.length++;
+            });
+            if (params.length == 0) {
+                return true;
+            }
+            else {
+                document.write("merchantReference=" + params['merchantReference']);
+                document.write("<br>skinCode=" + params['skinCode']);
+                document.write("<br>shopperLocale=" + params['shopperLocale']);
+                document.write("<br>paymentMethod=" + params['paymentMethod']);
+                document.write("<br>authResult=" + params['authResult']);
+                document.write("<br>pspReference=" + params['pspReference']);
+                document.write("<br>merchantReturnData=" + params['merchantReturnData']);
+                document.write("<br>merchantSig=" + params['merchantSig']);
+            }
+            ;
+        }
+    </script>
+</head>
+<body onLoad="javascript:formSubmit();">
+<form action="https://test.adyen.com/hpp/select.shtml" method="post" name="AdyenTopUpForm">
+    <input type="hidden" name="merchantReference" value="88"/>
+    <input type="hidden" name="paymentAmount" value="100"/>
+    <input type="hidden" name="countryCode" value="DE"/>
+    <input type="hidden" name="currencyCode" value="EUR"/>
+    <input type="hidden" name="shipBeforeDate" value="2013-06-08T21:00:00Z"/>
+    <input type="hidden" name="skinCode" value="P4rs1nFF"/>
+    <input type="hidden" name="merchantAccount" value="LB_DEWebU"/>
+    <input type="hidden" name="shopperLocale" value="de"/>
+    <input type="hidden" name="sessionValidity" value="2013-06-08T21:00:00Z"/>
+    <input type="hidden" name="merchantSig" value="W8NOq34ubbwEWgCKpTnK/1equgs="/>
+    <input type="hidden" name="resURL" value="http://www.google.co.uk"/>
+    <input type="hidden" name="shopperEmail" value="regularrich@hotmail.com"/>
+</form>
+</body>
+</html>
