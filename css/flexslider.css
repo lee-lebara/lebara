@@ -110,7 +110,6 @@ html[xmlns] .slides {
 /* Direction Nav */
 .flex-direction-nav {
     *height: 0;
-    display: none;
 }
 
 .flex-direction-nav a {
@@ -132,11 +131,13 @@ html[xmlns] .slides {
     background-position: 100% 0;
     margin-right: 0px;
     margin-top: -10px;
+    display:none;
 }
 
 .flex-direction-nav .flex-prev {
     margin-left: 0px;
     margin-top: -10px;
+    display:none;
 }
 
 .flexslider:hover .flex-next {

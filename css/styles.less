@@ -213,6 +213,7 @@ table {
   display: block;
   margin: 0px auto;
   background-color: #00a6eb;
+  position: relative;
 }
 
 #login_header_content {
@@ -284,9 +285,12 @@ table {
 }
 
 .main_navigation {
+  position:relative;
+  z-index: 1000;
   .nav {
     list-style: none;
     *zoom: 1;
+    z-index: 1000;
     ul {
       list-style: none;
       width: 100%;
@@ -298,13 +302,14 @@ table {
       position: relative;
       ul {
         position: absolute;
+        z-index: 60;
         left: -9999px;
       }
       li a {
         display: block;
         .blue-gradient;
         position: relative;
-        z-index: 100;
+        z-index: 1000;
         border-top: 1px solid #175e4c;
         text-decoration: none;
         color: #ffffff;
@@ -398,6 +403,7 @@ table {
 
 #homepage_hero {
   width: 100%;
+  position: relative;
   float: left;
   a {
     display: block;
@@ -3892,6 +3898,7 @@ h1 {
 
   #logo {
     margin-left: 0px;
+    width:25%;
   }
 
   #my_lebara_content {
@@ -4174,6 +4181,7 @@ h1 {
 
   .payment_container {
     width: 940px;
+    position: relative;
   }
 
   .purchase_options_container2 {
@@ -5198,14 +5206,14 @@ h1 {
 
   .free_sim_promo_box {
     background: url("../images/free_sim_promo_box_background.png") bottom left no-repeat #00a6eb;
-    float: right;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     position: absolute;
     width: 320px;
     min-height: 320px;
-    margin: 0px 0px 0px 570px;
+    margin:0;
+    right:30px;
     padding: 20px;
     color: #ffffff;
     .drop-shadow;
@@ -6107,6 +6115,20 @@ h1 {
 
 /* --------------------------------- End minimum width of 992px ---------------------------------- */
 
-
+.lt-ie8{
+  #main_phone_number{
+    margin-left:0;
+    position:absolute;
+  }
+  .search_box{
+    left:0;
+    width:260px;
+    input{
+      /*      width:200px;*/
+      position: absolute;
+      left:0;
+    }
+  }
+}
 
 

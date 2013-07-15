@@ -1,5 +1,8 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
 <?php $pageTitle = "Terms &amp; Conditions";
        $metaDescription = "Make low cost international calls with Lebara. Get a free SIM today on Pay As You Go tariffs. Want to send money abroad? Let Lebara help!";
@@ -223,7 +226,7 @@
 
 5.         Exclusions and Liability
 
-5.1      The Service is offered on an ‘’as is ‘’ basis and we make no warranties, express or implied, with respect to the Service and/or the Content whatsoever (including without limitation regarding their satisfactory quality, fitness for a particular purpose, suitability, reliability, timeliness, accuracy, completeness, security or that they are free from error) unless specifically set out in the Agreement. You recognise that the Service may, from time to time, be adversely affected by events outside our control, including, without limitation, congestion, network coverage, dropped connections, the performance of wireless enabled devices and the maintenance of a secure network connection.
+5.1      The Service is offered on an ï¿½ï¿½as is ï¿½ï¿½ basis and we make no warranties, express or implied, with respect to the Service and/or the Content whatsoever (including without limitation regarding their satisfactory quality, fitness for a particular purpose, suitability, reliability, timeliness, accuracy, completeness, security or that they are free from error) unless specifically set out in the Agreement. You recognise that the Service may, from time to time, be adversely affected by events outside our control, including, without limitation, congestion, network coverage, dropped connections, the performance of wireless enabled devices and the maintenance of a secure network connection.
 
 5.2       We shall not be liable for any loss of use, profits or data or any indirect, special or consequential damages or losses, whether such losses or damages arise in contract, negligence or tort, including without limitation to the foregoing any losses in relation to:
 
@@ -256,7 +259,7 @@
 <div id="div2" class="content_box terms targetDiv">
 <h3>Lebara Call Credit Transfer</h3>
 
-    The "Call Credit Transfer" facility (the CCT Facility) is offered by Lebara Mobile Ltd, and only operates between Lebara Mobile customers in the UK and customers of selected international operators. These terms, which apply to the provision of the CCT Facility (the CCT Terms), must be read in conjunction with Lebara Mobile’s General Terms and Conditions; in the case of a conflict, the CCT Terms will prevail.
+    The "Call Credit Transfer" facility (the CCT Facility) is offered by Lebara Mobile Ltd, and only operates between Lebara Mobile customers in the UK and customers of selected international operators. These terms, which apply to the provision of the CCT Facility (the CCT Terms), must be read in conjunction with Lebara Mobileï¿½s General Terms and Conditions; in the case of a conflict, the CCT Terms will prevail.
     The sender must register their Lebara mobile number with the CCT Facility. To do so, SMS the command JOIN*xxxx to 65088, where xxxx is a 4-digit PIN code selected by the sender.
     You must keep your PIN code secure at all times: Lebara will not be responsible for any misuse of your PIN code. You should not use the same PIN code across different services (whether from Lebara or anyone else).
     Every time you confirm a CCT Facility transfer, you will be deemed to accept these CCT Terms; it is your obligation to read and ensure you understand the CCT Terms.
@@ -268,9 +271,9 @@
     You will receive a message detailing your transfer; to complete the transfer you will need to confirm the transfer.
     You will be notified of any charges for the transfer prior to confirming the transfer. If you do not accept the charges, do not confirm the transfer: continuing will amount to acceptance of such charges.  Charges will be deducted from your PAYG account balance.
     If you are using the CCT Facility via SMS, messages containing all or some of your PIN code will be stored in your message outbox: you should delete these once the transaction has been completed.
-    Any call credit transferred to a Lebara customer will have the same validity in the recipient’s account as it had in the sender’s account.
+    Any call credit transferred to a Lebara customer will have the same validity in the recipientï¿½s account as it had in the senderï¿½s account.
     Lebara may place limits on the amount you can transfer per transaction, the number of transactions per day, or otherwise, as it sees fit.
-    Lebara can amend these CCT Terms on 30 days’ notice: the most current version of the CCT Terms can be found at www.lebara.uk/call-credit-transfer-terms-and-conditions.
+    Lebara can amend these CCT Terms on 30 daysï¿½ notice: the most current version of the CCT Terms can be found at www.lebara.uk/call-credit-transfer-terms-and-conditions.
 
 
 </div>
