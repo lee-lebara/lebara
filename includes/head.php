@@ -16,7 +16,7 @@ var monetateT = new Date().getTime();
 
 
 <meta charset="UTF-8">
-<title><?php echo $pageTitle; ?> </title>
+<title><?php echo $pageTitle; ?></title>
 <meta name="description" content="<?php echo $metaDescription; ?>" />
 <meta name="keywords" content="<?php echo $metaKeywords; ?>" />
 <meta name="format-detection" content="telephone=no" />
