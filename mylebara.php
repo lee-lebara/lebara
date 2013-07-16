@@ -68,7 +68,6 @@ function initCheckBoxes()
 
 </script>
 
-
 <script>
 
     function loadOverlay_ml(){
@@ -82,43 +81,69 @@ function initCheckBoxes()
             $("#bgOverlay_ml").data("state",1);
         }
 
-            var cbSlider = $(e.target).parent();
-
-            var cbSliderStatus = cbSlider.find(".cb-slider_small").attr("cb-status");
-
-            $(".overlayClose_ml_no").click(function(e){
-                disableOverlay_ml_no(e);
+        /* Reset this option */
+        var cbSlider = $(e.target).parent().find(".cb-slider_small");
+        var cbSliderStatus = cbSlider.attr("cb-status");
+        $(".overlayClose_ml_no").click(function(e){
+            disableOverlay_ml(e);
+            cbSlider.one('click', function(e) {
+                if(cbSliderStatus == 1){
+                    $(this).animate({left: "0"}, slideSpeed);
+                    $(this).attr("cb-status", "0");
+                }
             });
-
+            cbSlider.trigger('click');
+        });
     }
 
-    function loadOverlay_ml2(e){
-
-            //loads popup only if it is disabled
-            if($("#bgOverlay_ml").data("state")==0){
-                $("#bgOverlay_ml").css({
-                    "opacity": "0.7"
-                });
-                $("#bgOverlay_ml").fadeIn("medium");
-                $("#overlay_ml2").fadeIn("medium");
-                $("#bgOverlay_ml").data("state",1);
-            }
-
-            var cbSlider = $(e.target).parent();
-
-            var cbSliderStatus = cbSlider.find(".cb-slider_small").attr("cb-status");
-
-            $(".overlayClose_ml_no").click(function(e){
-                disableOverlay_ml_no(e);
+    function loadOverlay_mypay(e){
+        //loads popup only if it is disabled
+        if($("#bgOverlay_ml").data("state")==0){
+            $("#bgOverlay_ml").css({
+                "opacity": "0.7"
             });
-
-
+            $("#bgOverlay_ml").fadeIn("medium");
+            $("#overlay_ml2").fadeIn("medium");
+            $("#bgOverlay_ml").data("state",1);
         }
 
-    function disableOverlay_ml(e){
+        /* Reset this option */
+        var cbSlider = $(e.target).parent().find(".cb-slider_small");
 
-        var save = e.target;
+        cbSlider.addClass('activateMypay');
 
+        var cbSliderStatus = cbSlider.attr("cb-status");
+        $(".overlayClose_ml_no").click(function(e){
+
+            if($('.defaultOption').length>0){
+                $(".cb-slider_small:not('.defaultOption')").animate({left: "0"}, slideSpeed);
+                $(".cb-slider_small:not('.defaultOption')").attr("cb-status", "0");
+            } else{
+                cbSlider.animate({left: "0"}, slideSpeed);
+                cbSlider.attr("cb-status", "0");
+            }
+
+            disableOverlay_ml(e);
+
+        });
+    }
+
+    function disableOverlay_ml_yes(){
+        if ($("#bgOverlay_ml").data("state")==1){
+            $("#bgOverlay_ml").fadeOut("medium");
+            $("#overlay_ml").fadeOut("medium");
+            $("#overlay_ml2").fadeOut("medium");
+            $("#bgOverlay_ml").data("state",0);
+        }
+
+        $(".cb-slider_small:not('.activateMypay')").animate({left: "0"}, slideSpeed);
+        $(".cb-slider_small:not('.activateMypay')").attr("cb-status", "0");
+
+        $(".cb-slider_small").removeClass('activateMypay');
+    }
+
+    function disableOverlay_ml(){
+        $(".cb-slider_small").removeClass('activateMypay');
         if ($("#bgOverlay_ml").data("state")==1){
             $("#bgOverlay_ml").fadeOut("medium");
             $("#overlay_ml").fadeOut("medium");
@@ -126,18 +151,6 @@ function initCheckBoxes()
             $("#bgOverlay_ml").data("state",0);
         }
     }
-
-    function disableOverlay_ml_no(e){
-
-            var revert = e.target;
-
-            if ($("#bgOverlay_ml").data("state")==1){
-                $("#bgOverlay_ml").fadeOut("medium");
-                $("#overlay_ml").fadeOut("medium");
-                $("#overlay_ml2").fadeOut("medium");
-                $("#bgOverlay_ml").data("state",0);
-            }
-        }
 
     function centerOverlay_ml(){
         var owinw = $(window).width();
@@ -156,19 +169,36 @@ function initCheckBoxes()
     $(document).ready(function() {
        $("#bgOverlay_ml").data("state",0);
 
+        //activate options
+        $(".cb-slider_small").each(function(){
+             var thisCbStatus = $(this).attr("cb-status");
+             if (thisCbStatus == 1){
+               $(this).animate({left: leftDist}, slideSpeed);
+               $(this).attr("cb-status", "1");
+               $(this).addClass('defaultOption');
+             }
+        });
 
        $(".overlay_trigger_ml").click(function(e){
             centerOverlay_ml();
+            //if my pay id the load my pay popup
             if($('#mypay-gateway').length>0){
-                loadOverlay_ml2(e);
+                loadOverlay_mypay(e);
             } else{
+            // else default to adyen
                 loadOverlay_ml(e);
             }
        });
 
+       //General close popup
        $(".overlayClose_ml").click(function(e){
             disableOverlay_ml(e);
        });
+
+        // MyPay Popup if yes turn off other options
+        $(".overlayClose_ml_yes").click(function(e){
+             disableOverlay_ml_yes(e);
+        });
 
        $(document).keypress(function(e){
             if(e.keyCode==27) {
@@ -182,27 +212,25 @@ function initCheckBoxes()
          centerOverlay_ml();
     });
 
-
 </script>
-
-
 
 <?php include($DOCUMENT_ROOT . "./includes/main_header_loggedin.php"); ?>
 
-
-
 <?php include($DOCUMENT_ROOT . "./includes/nav_loggedin.php"); ?>
 
+<!-- ADYEN POPUP -->
 <div id="overlay_ml">
+    <p>ADYEN</p>
 	<p>Are you sure you want to make this change?:</p>     
 	<a class="overlayClose_ml">YES</a>
-    <a class="overlayClose_ml_no">NO</a>
+    <a class="overlayClose_ml">NO</a>
 </div>
 
-
+<!-- MYPAY POPUP -->
 <div id="overlay_ml2">
-	<p>Are you sure you want to make this change? 2 :</p>
-	<a class="overlayClose_ml">YES</a>
+    <p>MY PAY</p>
+	<p>Are you sure you want to make this change? :</p>
+	<a class="overlayClose_ml_yes">YES</a>
     <a class="overlayClose_ml_no">NO</a>
 </div>
 
@@ -216,6 +244,8 @@ function initCheckBoxes()
 <div class="mylebara_page_header">
 	<h2 class="mylebara_header">Hi John</h2><div class="last_login_details">Last login: 12 Jun-2013</div>
 </div>
+
+    <!-- Check if MyPay, if yes add ID #mypay-gateway to allow one item toggled else no ID to allow multiple -->
 
 	<div id="mypay-gateway" class="mylebara_primary_content">
         
@@ -238,7 +268,7 @@ function initCheckBoxes()
               <td>
                 <div class="cb-bg_small">
                   <a class="auto_topup_switch">
-                    <div class="cb-slider_small" cb-status="0"></div>
+                    <div class="cb-slider_small" cb-status="1"></div>
                   </a>
                 </div>
                 <a class="mylebara_save_button overlay_trigger_ml">SAVE</a>
@@ -249,8 +279,8 @@ function initCheckBoxes()
               <td>Currently set to <a class="set_or_not" style="display: none;">NOT </a>auto renew on expiry</td>
               <td>
                 <div class="cb-bg_small">
-				  <!-- Add this ID to init popup id="overlay_trigger_ml" -->
                   <a class="auto_topup_switch">
+				  <!-- change cb-status to 1 for on state for default option when saved -->
                     <div class="cb-slider_small" cb-status="0"></div>
                   </a>
                 </div>

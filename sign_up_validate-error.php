@@ -148,22 +148,24 @@ function populateForm(){
     <div class="narrow_details_field">
 
         <span>*First Name</span>
-
         <div class="narrow_input_field">
-             <div class="validate-message" id="mf127">
-                <p id="mf128">This field can not be empty</p>
-             </div>
-
             <input type="text" name="first_name" value="" />
          </div>
-
      </div>
 
-
-
-
     <div class="narrow_details_field"><span>*Last Name</span><div class="narrow_input_field"><input type="text" name="first_name" value="" /></div></div>
-	<div class="narrow_details_field"><span>*Email Address</span><div class="narrow_input_field"><input type="text" name="first_name" value="" /></div></div>
+	<div class="narrow_details_field"><span>*Email Address</span>
+
+	    <div class="narrow_input_field">
+
+	            <!-- Use this validation message -->
+    	        <div class="validate-message" id="mf127">
+                    <p id="mf128">Email already in use, <a href="login.php">please login here</a></p>
+                </div>
+
+	        <input type="text" name="first_name" value="" />
+	    </div>
+	</div>
     <p>Please add the billing address (for your credit/debit card):</p>
 	<div class="narrow_details_field"><span>*First line of address</span><div class="narrow_input_field"><input type="text" name="address_1" id="address_1" value="" placeholder="e.g. 28" /></div></div>
     <div class="narrow_details_field"><span>*Postcode</span><div class="narrow_input_field"><input type="text" name="postcode" id="postcode" value="" placeholder="eg AL9 6BL" /></div></div>
