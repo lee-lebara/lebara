@@ -1068,6 +1068,45 @@ h1 {
   margin-top: 10px;
 }
 
+
+.alert-warning{
+  display: none;
+  padding:15px;
+  border:1px solid #b94a48;
+  background: #f2dede;
+  font-weight: bold;
+  color:#b94a48;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-size: .85em;
+  .closeIcon{
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.alert-success{
+  display: none;
+  padding:15px;
+  border:1px solid #339900;
+  background: #D6FFC1;
+  font-weight: bold;
+  color:#339900;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-size: .85em;
+  .closeIcon{
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+  }
+}
+
 #popupClose {
   font-size: 20px;
   line-height: 20px;
@@ -1136,7 +1175,7 @@ h1 {
   top: 0;
   left: 0;
   background: #ffffff;
-  z-index: 1;
+  z-index: 1100;
   padding-bottom: 100px;
 }
 
@@ -1306,6 +1345,7 @@ h1 {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   color: #ffffff;
+  cursor: pointer;
   img {
     max-width: 100%;
   }
@@ -1330,11 +1370,21 @@ h1 {
   z-index: 2;
   padding: 5%;
   width: 33%;
+  line-height:1.25em;
   margin: 0px 33%;
   border: 1px solid #b2b2b2;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  h2{
+    font-size:1.5em;
+    color:@color-lebaraBlue;
+    text-align: center;
+    line-height:1.5em;
+    margin-bottom:10px;
+  }
+  a{
+  text-decoration: none}
   p {
     font-size: 1em;
     color: #000000;
@@ -6155,6 +6205,7 @@ h1.products_landing {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     margin-top: 5px;
+    cursor: pointer;
   }
 
   .mylebara_summary_panel {

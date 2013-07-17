@@ -24,12 +24,11 @@
 
 
 
-
 <!-- ADYEN POPUP -->
 <div id="overlay_ml">
     <h2>ADYEN</h2>
 	<p>Are you sure you want to make this change?:</p>     
-	<a class="overlayClose_ml">YES</a>
+	<a class="overlayClose_ml" href="mylebara-topup-renew-success.php">YES</a>
     <a class="overlayClose_ml">NO</a>
 </div>
 
@@ -40,19 +39,22 @@
 <div id="overlay_ml2">
     <h2>MI-PAY</h2>
 	<p>Are you sure you want to make this change? :</p>
-	<a class="overlayClose_ml_yes">YES</a>
+	<a class="overlayClose_ml" href="mylebara-topup-renew-success.php">YES</a>
     <a class="overlayClose_ml_no">NO</a>
 </div>
 
 
-
-
-<div id="bgOverlay_ml"></div> 
+<div id="bgOverlay_ml"></div>
 
 <h1 class="desktop_element product_header">My<span>Lebara</span></h1>
 
-<div class="desktop_page_container">
 
+<!-- Add class .card-added-confirm -->
+<div class="desktop_page_container card-added-confirm">
+
+    <div id="card-added-success" class="alert-success">
+        <h2><a id="closeThis" class="closeIcon right">X</a>Your settings are now saved.</h2>
+    </div>
 
 <div class="mylebara_page_header">
 	<h2 class="mylebara_header">Hi John</h2><div class="last_login_details">Last login: 12 Jun-2013</div>
@@ -81,7 +83,7 @@
               <td>
                 <div class="cb-bg_small">
                   <a class="auto_topup_switch">
-                    <div class="cb-slider_small" cb-status="0"></div>
+                    <div class="cb-slider_small" cb-status="1"></div>
                   </a>
                 </div>
                 <a class="mylebara_save_button overlay_trigger_ml">SAVE</a>

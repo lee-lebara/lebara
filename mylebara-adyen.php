@@ -28,8 +28,8 @@
 <!-- ADYEN POPUP -->
 <div id="overlay_ml">
     <h2>ADYEN</h2>
-	<p>Are you sure you want to make this change?:</p>     
-	<a class="overlayClose_ml">YES</a>
+	<p>Are you sure you want to make this change?:</p>
+	<a class="overlayClose_ml" href="mylebara-topup-renew-success.php">YES</a>
     <a class="overlayClose_ml">NO</a>
 </div>
 
@@ -40,11 +40,9 @@
 <div id="overlay_ml2">
     <h2>MI-PAY</h2>
 	<p>Are you sure you want to make this change? :</p>
-	<a class="overlayClose_ml_yes">YES</a>
+	<a class="overlayClose_ml" href="mylebara-topup-renew-success.php">YES</a>
     <a class="overlayClose_ml_no">NO</a>
 </div>
-
-
 
 
 <div id="bgOverlay_ml"></div> 
@@ -60,7 +58,7 @@
 
     <!-- Check if MyPay, if yes add ID #mypay-gateway to allow one item toggled else no ID to allow multiple -->
 
-	<div id="mypay-gateway" class="mylebara_primary_content">
+	<div class="mylebara_primary_content">
         
         <div class="mylebara_content_box">
     	<div class="mylebara_content_box_header">Manage Top Up / Auto Renew</div>

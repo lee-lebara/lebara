@@ -25,22 +25,12 @@
 
 
 
-<!-- ADYEN POPUP -->
+<!-- START MI-PAY NO CARD POPUP -->
 <div id="overlay_ml">
-    <h2>ADYEN</h2>
-	<p>Are you sure you want to make this change?:</p>     
-	<a class="overlayClose_ml">YES</a>
-    <a class="overlayClose_ml">NO</a>
-</div>
-
-
-
-
-<!-- MYPAY POPUP -->
-<div id="overlay_ml2">
     <h2>MI-PAY</h2>
-	<p>Are you sure you want to make this change? :</p>
-	<a class="overlayClose_ml_yes">YES</a>
+    <p><strong>Please enter your card details.</strong></p>
+	<p>No visa/debit card has been found.<br/> Would you like to add them now?</p>
+	<a class="overlayClose_ml" href="mylebara-card-input.php">YES</a>
     <a class="overlayClose_ml_no">NO</a>
 </div>
 
@@ -58,9 +48,9 @@
 	<h2 class="mylebara_header">Hi John</h2><div class="last_login_details">Last login: 12 Jun-2013</div>
 </div>
 
-    <!-- Check if MyPay, if yes add ID #mypay-gateway to allow one item toggled else no ID to allow multiple -->
+    <!-- Check if MiPay, if yes add ID #mypay-gateway to allow one item toggled else no ID to allow multiple -->
 
-	<div id="mypay-gateway" class="mylebara_primary_content">
+	<div class="mylebara_primary_content">
         
         <div class="mylebara_content_box">
     	<div class="mylebara_content_box_header">Manage Top Up / Auto Renew</div>

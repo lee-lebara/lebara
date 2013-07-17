@@ -29,7 +29,7 @@
 <div id="overlay_ml">
     <h2>ADYEN</h2>
 	<p>Are you sure you want to make this change?:</p>     
-	<a class="overlayClose_ml">YES</a>
+	<a class="overlayClose_ml" href="mylebara-topup-renew-success.php">YES</a>
     <a class="overlayClose_ml">NO</a>
 </div>
 
@@ -40,7 +40,7 @@
 <div id="overlay_ml2">
     <h2>MI-PAY</h2>
 	<p>Are you sure you want to make this change? :</p>
-	<a class="overlayClose_ml_yes">YES</a>
+	<a class="overlayClose_ml" href="mylebara-topup-renew-success.php">YES</a>
     <a class="overlayClose_ml_no">NO</a>
 </div>
 
@@ -81,7 +81,7 @@
               <td>
                 <div class="cb-bg_small">
                   <a class="auto_topup_switch">
-                    <div class="cb-slider_small" cb-status="0"></div>
+                    <div class="cb-slider_small" cb-status="1"></div>
                   </a>
                 </div>
                 <a class="mylebara_save_button overlay_trigger_ml">SAVE</a>

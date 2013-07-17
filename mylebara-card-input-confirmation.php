@@ -24,7 +24,6 @@
 
 
 
-
 <!-- ADYEN POPUP -->
 <div id="overlay_ml">
     <h2>ADYEN</h2>
@@ -45,14 +44,17 @@
 </div>
 
 
-
-
-<div id="bgOverlay_ml"></div> 
+<div id="bgOverlay_ml"></div>
 
 <h1 class="desktop_element product_header">My<span>Lebara</span></h1>
 
-<div class="desktop_page_container">
 
+<!-- Add class .card-added-confirm -->
+<div class="desktop_page_container card-added-confirm">
+
+    <div id="card-added-success" class="alert-success">
+        <h2><a id="closeThis" class="closeIcon right">X</a>Thank you, your card details are now saved.</h2>
+    </div>
 
 <div class="mylebara_page_header">
 	<h2 class="mylebara_header">Hi John</h2><div class="last_login_details">Last login: 12 Jun-2013</div>

@@ -29,7 +29,7 @@
 <div id="overlay_ml">
     <h2>ADYEN</h2>
 	<p>Are you sure you want to make this change?:</p>     
-	<a class="overlayClose_ml">YES</a>
+	<a class="overlayClose_ml" href="mylebara-topup-renew-success.php">YES</a>
     <a class="overlayClose_ml">NO</a>
 </div>
 
@@ -40,7 +40,7 @@
 <div id="overlay_ml2">
     <h2>MI-PAY</h2>
 	<p>Are you sure you want to make this change? :</p>
-	<a class="overlayClose_ml_yes">YES</a>
+	<a class="overlayClose_ml" href="mylebara-topup-renew-success.php">YES</a>
     <a class="overlayClose_ml_no">NO</a>
 </div>
 
@@ -51,10 +51,13 @@
 
 <h1 class="desktop_element product_header">My<span>Lebara</span></h1>
 
-<div class="desktop_page_container">
+<div class="desktop_page_container mipay-option-validate">
 
+    <div id="mipay-option-warning" class="alert-warning">
+        <h2><a id="closeThis" class="closeIcon right">X</a>Please check you are using only one option</h2>
+    </div>
 
-<div class="mylebara_page_header">
+    <div class="mylebara_page_header">
 	<h2 class="mylebara_header">Hi John</h2><div class="last_login_details">Last login: 12 Jun-2013</div>
 </div>
 
