@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
 <?php $pageTitle = "Select Product";
@@ -10,46 +10,91 @@
 	   include($DOCUMENT_ROOT . "./includes/head.php");
 ?>
 
+  <body>
+    <?php include($DOCUMENT_ROOT . "./includes/main_header.php"); ?>
+    <?php include($DOCUMENT_ROOT . "./includes/nav.php"); ?>
 
-<body>
+    <div class="desktop_page_container">
+ 	  <h1 class="products_header">Our Offers</h1>
+
+      <div class="product_hero">
+        <div class="logo"><span>Lebara</span></div>
+        <h2>Pay As You Go</h2>
+        <p>Great value international calls from <a href="#">1p a minute</a>.</p>
+        <a href="#" class="button_blue">Find out more</a>
+      </div>
+      
+      <div class="product_container left_column">
+      
+        <h2>Best for <span>international calling:</span></h2>
+        
+        <div class="product_module product_country_pass">
+          <h3>Country Pass</h3>
+          <p>Our best international rates to mobiles and landlines from &pound;5 per week</p>
+          <a href="#" class="button_blue">Find out more</a>
+        </div>
+        
+        <div class="product_module product_lebara_freedom">
+          <h3>Lebara Freedom</h3>
+          <p>Unlimited UK texts &amp; calls, 1GB data and great international rates for one fixed price.</p>
+          <a href="#" class="button_blue">Find out more</a>
+        </div>        
+        
+      </div>
+      
+      <div class="product_container right_column">
+      
+        <h2>Cheap <span>national &amp; international calls:</span></h2>
+        
+        <div class="product_module product_allinone">
+          <h3>All In One</h3>
+          <p>3.3p per UK minute, text or MB and selected destinations at low rates</p>
+          <a href="#" class="button_blue">Find out more</a>
+        </div>
+        
+        <div class="product_module product_uk_plus">
+          <h3>UK Plus</h3>
+          <p>150 minutes to UK landlines/mobiles, 500mb interent and great country rates</p>
+          <a href="#" class="button_blue">Find out more</a>
+        </div>        
+        
+      </div>   
+      
+      <div class="clear"></div>
+
+      <div class="product_container">
+      
+        <h2>Internet for <span>less:</span></h2>
+        <div class="product_module product_data_pass"">
+          <h3>Data passes</h3>
+          <p>Choose how much data you want - now with our lowest price ever!</p>
+          <a href="#" class="button_blue">Find out more</a>
+        </div>
+        
+        <div class="product_module product_blackberry_pass"">
+          <h3>Blackberry Pass</h3>
+          <p>30 days of Blackberry Messaging and 500mb of data for just &pound;5</p>
+          <a href="#" class="button_blue">Find out more</a>
+        </div>        
+        
+      </div>            
+
+      <div class="product_container footer">
+      
+        <h2>Send money <span>worldwide:</span></h2>
+        <div class="product_module product_lebara_money">
+          <h3>Lebara Money</h3>
+          <p>Send Money and Mobile Top-Up to your friends and family worldwide.</p>
+          <a href="#" class="button_blue">Find out more</a>
+        </div> 
+        
+      </div>   
+
+      <div class="clear"></div>
+    </div>
+
+    <?php include($DOCUMENT_ROOT . "./includes/footer_desktop.php"); ?>
 
 
-<?php include($DOCUMENT_ROOT . "./includes/main_header.php"); ?>
-
-
-<?php include($DOCUMENT_ROOT . "./includes/nav.php"); ?>
-
-
-<div class="fake_page_content_shop">
-<div class="top_up99">
-<a href="http://www.hyperlathe.com/clients/lebara/products_cc.php" style="display:block; height:100%; width:100%;"></a>
-</div>
-<div class="country_pass99">
-<a href="http://www.hyperlathe.com/clients/lebara/country_passes.php" style="display:block; height:100%; width:100%;"></a>
-</div>
-<div class="all_in_one99">
-<a href="http://www.hyperlathe.com/clients/lebara/all_in_one.php" style="display:block; height:100%; width:100%;"></a>
-</div>
-<div class="freedom99">
-<a href="http://www.hyperlathe.com/clients/lebara/unlimited_product.php" style="display:block; height:100%; width:100%;"></a>
-</div>
-<div class="uk_plus99">
-<a href="http://www.hyperlathe.com/clients/lebara/uk_plus.php" style="display:block; height:100%; width:100%;"></a>
-</div>
-<div class="data_passes99">
-<a href="http://www.hyperlathe.com/clients/lebara/data_passes.php" style="display:block; height:100%; width:100%;"></a>
-</div>
-<div class="blackberry_passes99">
-<a href="http://www.hyperlathe.com/clients/lebara/blackberry_pass.php" style="display:block; height:100%; width:100%;"></a>
-</div>
-<div class="lebara_money99">
-<a href="https://www.lebara-money.com/" target="_blank" style="display:block; height:100%; width:100%;"></a>
-</div>
-</div>
-
-
-<?php include($DOCUMENT_ROOT . "./includes/footer_desktop.php"); ?>
-
-
-</body>
+  </body>
 </html>
