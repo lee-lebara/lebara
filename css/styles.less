@@ -2477,26 +2477,21 @@ h1 {
 }
 
 .universal-error-page {
-
   background: url(../images/number_alert.gif) 50% 10px no-repeat;
-
   padding-top: 60px;
   text-align: center;
   color: #555;
-
   h1 {
     margin: 20px;
     float: none;
     font-size: 2em;
   }
-
   p {
     padding: 0 20px 10px;
     font-size: 1em;
     line-height: 1.3em;
     font-size: 20px;
   }
-
   a {
     color: #00a6eb;
   }
@@ -2528,6 +2523,142 @@ h1 {
     border: 1px solid #c00;
   }
 }
+
+/* --------------------------------- Product page ---------------------------------- */
+ 
+h1.products_landing {
+  margin: 0 0 20px 0;
+}
+ 
+.product_hero, 
+.product_container,
+.product_module {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  margin: 0 0 20px 0;
+}
+ 
+.product_hero {
+  background: url(../images/background_product_hero.jpg) center right no-repeat;
+  padding: 20px;
+  h2 {
+    color: #00a6eb;
+    font-size: 1.7em;
+    font-family: GothamMedium,Trebuchet,Verdana,Helvetica,Arial,sans-serif;
+  }
+  a {
+    color: #000;
+  }
+  .logo {
+    background: url(../images/logo_shop.gif) top left no-repeat;  
+    width: 125px;
+    height: 23px;
+    margin: 0 0 10px 0;
+    span {
+      display: none;
+    }
+  }
+}
+
+.product_container {
+  padding: 10px 20px 0 20px;
+  overflow: auto;
+  h2,
+  h3 {
+    color: #00a6eb;
+    font-family: GothamLight,Trebuchet,Verdana,Helvetica,Arial,sans-serif;
+    margin: 0 0 5px 0;
+  }
+  h2 span,
+  h3 span {
+    font-family: GothamMedium,Trebuchet,Verdana,Helvetica,Arial,sans-serif;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.5em;
+    font-weight: 200;
+  }
+}
+
+.product_container.left_column {
+    float: left;
+    width: 44%;
+}
+  
+.product_container.right_column {
+    float: right;
+    width: 44%;    
+}  
+
+.product_module {
+  padding: 20px 105px 20px 10px;
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.product_hero,
+.product_module {
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+a.button_blue {
+  background: #00a6eb url(../images/dashboard_topup_arrow.gif) center left no-repeat;
+  background-size: 10px;
+  background-position: 5px;
+  font-family: GothamMedium,Trebuchet,Verdana,Helvetica,Arial,sans-serif;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  color: #FFF;
+  font-size: 0.8em;
+  text-decoration: none;
+  padding: 5px 5px 5px 15px;
+}
+
+.product_country_pass {
+  background: url(../images/background_product_country_pass.jpg) center right no-repeat;
+}
+
+.product_lebara_freedom {
+  background: url(../images/background_product_lebara_freedom.jpg) center right no-repeat;
+}
+
+.product_allinone {
+  background: url(../images/background_product_allinone.jpg) center right no-repeat;
+}
+
+.product_uk_plus {
+  background: url(../images/background_product_uk_plus.jpg) center right no-repeat;
+}
+
+.product_data_pass {
+  background: url(../images/background_product_data_pass.jpg) center right no-repeat;
+  width: 36%;
+  float: left;
+}
+
+.product_blackberry_pass {
+  background: url(../images/background_product_blackberry_pass.jpg) center right no-repeat;
+  width: 36%;
+  float: right;
+}
+
+.product_lebara_money {
+  background: url(../images/background_product_lebara_money.jpg) center right no-repeat;
+}
+
+
+
+
+
+
 
 /*
 /
@@ -2563,6 +2694,7 @@ h1 {
 /* --------------------------------- End minimum width of 321px ---------------------------------- */
 
 /* --------------------------------- Minimum width of 480 pixels. ---------------------------------- */
+/*
 @media only screen and (min-width: 480px) {
 
   #main_header_content {
@@ -2613,10 +2745,11 @@ h1 {
   }
 
 }
-
+*/
 /* --------------------------------- End minimum width of 480px----------------------------------  */
 
 /* --------------------------------- Minimum width of 600 pixels. ---------------------------------- */
+
 @media only screen and (min-width: 600px) {
 
   .desktop_element {
@@ -2941,7 +3074,7 @@ h1 {
     border-top: 2px solid #cccccc;
     margin: 0px 0pc 20px 0px;
     padding: 0px 10px;
-    width: 100%;
+/*    width: 100%;*/
     float: left;
   }
 
@@ -3828,28 +3961,28 @@ h1 {
   }
 
 }
+/*
+h1.products_landing {
+  float: none;
+  margin: 20px 0;
+}
+
+.product_module.product_blackberry_pass,
+.product_module.product_data_pass {
+  float: none;
+  width: auto;
+}
+
+
 
 /* --------------------------------- End minimum width of 600px ---------------------------------- */
 
 /* --------------------------------- Minimum width of 768 pixels ---------------------------------- */
 @media only screen and (min-width: 768px) {
 
-  #main_header_content {
-  }
-
   #main_phone_number {
     margin: 15px 0px 0px 30%;
     font-size: 1em;
-  }
-
-  .main_navigation {
-    ul {
-      li {
-        a {
-
-        }
-      }
-    }
   }
 
 }
@@ -3859,22 +3992,9 @@ h1 {
 /* --------------------------------- Minimum width of 768 pixels. IPAD PORTRAIT ---------------------------------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
 
-  #main_header_content {
-  }
-
   #main_phone_number {
     margin: 15px 0px 0px 30%;
     font-size: 1em;
-  }
-
-  .main_navigation {
-    ul {
-      li {
-        a {
-
-        }
-      }
-    }
   }
 
 }
@@ -3882,28 +4002,17 @@ h1 {
 /* --------------------------------- End minimum width of 768px IPAD PORTRAIT ---------------------------------- */
 
 /* --------------------------------- Minimum width of 768 pixels. IPAD LANDSCAPE ---------------------------------- */
+/*
 @media only screen(min-device-width:768px)and(max-device-width:1024px)and(orientation : landscape){
-#logo {
-}
-
-#main_header_content {
-}
-
-.main_navigation {
-  ul {
-    li {
-      a {
-
-      }
-    }
-  }
-}
 
 }
+
+*/
 /* --------------------------------- End minimum width of 768px IPAD LANDSCAPE ---------------------------------- */
 
 /* --------------------------------- Minimum width of 992 pixels. ---------------------------------- */
 @media only screen and (min-width: 992px) {
+
 
   #main_header_content {
     width: 980px;
@@ -4539,7 +4648,7 @@ h1 {
   .products_header {
     float: none;
     color: #b2b2b2;
-    margin: 0px 0px 20px 20px;
+    margin: 0 0 10px 20px;
   }
 
   .offer_landing_page_icon {

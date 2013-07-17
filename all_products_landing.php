@@ -15,7 +15,7 @@
     <?php include($DOCUMENT_ROOT . "./includes/nav.php"); ?>
 
     <div class="desktop_page_container">
- 	  <h1 class="products_header">Our Offers</h1>
+ 	  <h1 class="products_header products_landing">Our Offers</h1>
 
       <div class="product_hero">
         <div class="logo"><span>Lebara</span></div>
@@ -31,13 +31,13 @@
         <div class="product_module product_country_pass">
           <h3>Country Pass</h3>
           <p>Our best international rates to mobiles and landlines from &pound;5 per week</p>
-          <a href="#" class="button_blue">Find out more</a>
+          <a href="country_passes.php" class="button_blue">Find out more</a>
         </div>
         
         <div class="product_module product_lebara_freedom">
           <h3>Lebara Freedom</h3>
           <p>Unlimited UK texts &amp; calls, 1GB data and great international rates for one fixed price.</p>
-          <a href="#" class="button_blue">Find out more</a>
+          <a href="unlimited_product.php" class="button_blue">Find out more</a>
         </div>        
         
       </div>
@@ -49,13 +49,13 @@
         <div class="product_module product_allinone">
           <h3>All In One</h3>
           <p>3.3p per UK minute, text or MB and selected destinations at low rates</p>
-          <a href="#" class="button_blue">Find out more</a>
+          <a href="all_in_one.php" class="button_blue">Find out more</a>
         </div>
         
         <div class="product_module product_uk_plus">
           <h3>UK Plus</h3>
           <p>150 minutes to UK landlines/mobiles, 500mb interent and great country rates</p>
-          <a href="#" class="button_blue">Find out more</a>
+          <a href="uk_plus.php" class="button_blue">Find out more</a>
         </div>        
         
       </div>   
@@ -67,14 +67,14 @@
         <h2>Internet for <span>less:</span></h2>
         <div class="product_module product_data_pass"">
           <h3>Data passes</h3>
-          <p>Choose how much data you want - now with our lowest price ever!</p>
-          <a href="#" class="button_blue">Find out more</a>
+          <p>Choose how much data you want -<br />now with our lowest price ever!</p>
+          <a href="data_passes.php" class="button_blue">Find out more</a>
         </div>
         
         <div class="product_module product_blackberry_pass"">
           <h3>Blackberry Pass</h3>
           <p>30 days of Blackberry Messaging and 500mb of data for just &pound;5</p>
-          <a href="#" class="button_blue">Find out more</a>
+          <a href="blackberry_pass.php" class="button_blue">Find out more</a>
         </div>        
         
       </div>            
@@ -85,7 +85,7 @@
         <div class="product_module product_lebara_money">
           <h3>Lebara Money</h3>
           <p>Send Money and Mobile Top-Up to your friends and family worldwide.</p>
-          <a href="#" class="button_blue">Find out more</a>
+          <a href="https://www.lebara-money.com/" class="button_blue">Find out more</a>
         </div> 
         
       </div>   
