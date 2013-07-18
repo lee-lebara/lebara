@@ -21,7 +21,7 @@ var mylebaraDashboard = (function ($) {
             if (thisCbStatus == 1) {
                 $(this).animate({left: leftDist}, slideSpeed);
                 $(this).attr("cb-status", "1");
-                $(this).addClass('defaultOption');
+                $(this).addClass('defaultOption checked');
             }
         });
 

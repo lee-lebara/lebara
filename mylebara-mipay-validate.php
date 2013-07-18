@@ -51,6 +51,7 @@
 
 <h1 class="desktop_element product_header">My<span>Lebara</span></h1>
 
+<!-- For Mipay validation please add class .mipay-option-validate -->
 <div class="desktop_page_container mipay-option-validate">
 
     <div id="mipay-option-warning" class="alert-warning">
@@ -62,7 +63,6 @@
 </div>
 
     <!-- Check if MyPay, if yes add ID #mypay-gateway to allow one item toggled else no ID to allow multiple -->
-
 	<div id="mypay-gateway" class="mylebara_primary_content">
         
         <div class="mylebara_content_box">
