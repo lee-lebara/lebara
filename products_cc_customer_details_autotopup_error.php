@@ -168,6 +168,11 @@ include($DOCUMENT_ROOT . "./includes/head.php");
 
             <div class="narrow_input_field">
 
+                <!-- Use this validation message -->
+                <div class="validate-message">
+                    <p id="mf128">Incorrect SMS code. Please check and try again.</p>
+                </div>
+
                 <input type="tel" name="sms_verify" value=""/>
                 <p>Not recieved your SMS code? <a href="#">Resend</a></p>
 

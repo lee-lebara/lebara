@@ -80,16 +80,6 @@ include($DOCUMENT_ROOT . "./includes/head.php");
 
 </div>
 
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.sms_verification_button').click(function(){
-          $('#verified').toggle();
-        });
-    });
-</script>
-
-
 <div class="purchase_page_container desktop_element">
 
 
@@ -122,19 +112,25 @@ include($DOCUMENT_ROOT . "./includes/head.php");
 
                     <div class="narrow_input_field" style="margin-top: 3px;">
 
+
+                        <!-- Use this validation message -->
+                        <div class="validate-message">
+                            <p><strong>You have input your received SMS code incorrectly 3 times.</strong><br/><br/>  Please contact Customer Services on <strong>0870 075 5588</strong>.</p>
+                        </div>
+
+
                         <input type="tel" name="sms_verify" value=""/>
 
                         <p>Not recieved your SMS code? <a href="#">Resend</a></p>
 
                     </div>
 
-
                     <div id="verified" style="display: none;"><img src="./images/small_green_tick.gif" alt="Verified">
                     </div>
+
                     <a class="sms_verification_button">APPLY</a></div>
 
                 <div class="clear"></div>
-
 
 
             </div>

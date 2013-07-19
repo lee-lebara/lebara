@@ -168,6 +168,12 @@ include($DOCUMENT_ROOT . "./includes/head.php");
 
             <div class="narrow_input_field">
 
+                <!-- Use this validation message -->
+                <div class="validate-message">
+                    <p>You have input received SMS code incorrectly 3<br/><br/> times. Please contact Customer Services on 0870 075 5588.</p>
+                </div>
+
+
                 <input type="tel" name="sms_verify" value=""/>
                 <p>Not recieved your SMS code? <a href="#">Resend</a></p>
 
