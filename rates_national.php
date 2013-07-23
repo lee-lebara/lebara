@@ -23,8 +23,8 @@
 
   <div class="landingpage_subnav">
     <ul>
-      <li><a href="rates.php" id="landingpage_subnav_selected">International</a></li>
-      <li><a href="rates_national.php">National</a></li>
+      <li><a href="rates.php">International</a></li>
+      <li><a href="rates_national.php" id="landingpage_subnav_selected">National</a></li>
       <li><a href="rates_roaming.php">Roaming</a></li>
     </ul>
   </div>
@@ -37,20 +37,27 @@
         
       <div class="shop_sub_content">
       
-        <h3>International <span>Tariff</span></h3>
-        <p>[INSERT EXISTING RATES DROPDOWN]</p>
+        <h3>National <span>Tariff</span></h3>
 
-        <div class="sub_module freedom_pass">
-          <h4>Pay As You go</h4>
-          <p>Colombia Rural<br />Landline: 15p/ min</p>
-          <a href="auto_address_button2">Top Up Now</a>
-        </div>
-        
-        <div class="sub_module payg">
-          <h4>WEB500 Pass</h4>
-          <p>Great Value bundles for internet on-the-go. Just £5 for 500mb, valid for 30 days</p>
-          <a href="#">More Info</a>
-        </div>
+        <ul class="national_tariff_list">
+          <li><span>Other UK Mobile</span>10p</li>
+          <li><span>Lebara to Lebara call</span>*FREE</li>
+          <li><span>UK Landline</span>**5p</li>
+          <li><span>UK Text Messages(to non Lebara Numbers)</span>12p</li>
+          <li><span>International Text Message</span>12p</li>
+          <li><span>Lebara to Lebara SMS</span>*FREE</li>
+          <li><span>Picture Messaging</span>45p</li>
+          <li><span>Video Messaging</span>45p</li>
+          <li><span>Voice Mail</span>10p</li>
+          <li><span>Emergency Calls</span>FREE</li>
+          <li><span>Lebara to Lebara call (without topup)</span>10p</li>
+          <li><span>Lebara to Lebara SMS (without topup)</span>12p</li>
+          <li><span>Internet per MB (after first 1Mb)</span>15p</li>
+          <li><span>To 070 prefix personal numbers</span>79p</li>
+          <li><span>Calls to 5588 (topup & balance check)</span>FREE</li>
+          <li><span>Calls to 5588 to talk to a customer service advisor</span>10p</li>
+          <li><span>Calls to 118XXX Directory enquiry services</span>£3</li>
+        </ul>
         
         <div class="clear"></div>
 
