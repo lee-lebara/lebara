@@ -2,12 +2,12 @@
 	<div class="footer_nav_1">
 		<ul class="footer_nav_list">
     		<li><a href="#"><span>Offers</span></a></li>
-       	 	<li><a href="#">Free SIM</a></li>
-       	 	<li><a href="#">Lebara Money</a></li>
-       	 	<li><a href="#">All-in-One</a></li>
-        	<li><a href="#">Passes</a></li>
+       	 	<li><a href="free_sim.php">Free SIM</a></li>
+       	 	<li><a href="http://www.lebara-money.com/">Lebara Money</a></li>
+       	 	<li><a href="all_in_one.php">All-in-One</a></li>
+        	<li><a href="country_passes.php">Passes</a></li>
         	<li><a href="#">Handsets</a></li>
-        	<li><a href="#">Internet &amp; Data</a></li>
+        	<li><a href="data_passes.php">Internet &amp; Data</a></li>
     	</ul>
         <ul class="footer_nav_list">
     		<li><a href="#"><span>Top Up</span></a></li>
@@ -20,18 +20,18 @@
     	</ul>
         <ul class="footer_nav_list">
     		<li><a href="#"><span>Rates</span></a></li>
-       	 	<li><a href="#">Pay As You Go Rates</a></li>
-       	 	<li><a href="#">International Rates</a></li>
-       	 	<li><a href="#">National Rates</a></li>
-        	<li><a href="#">Internet &amp; Data</a></li>
-        	<li><a href="#">All-In-One Rates</a></li>
-        	<li><a href="#">Passes Rates</a></li>
+       	 	<li><a href="">Pay As You Go Rates</a></li>
+       	 	<li><a href="rates.php">International Rates</a></li>
+       	 	<li><a href="rates_national.php">National Rates</a></li>
+        	<li><a href="data_passes.php">Internet &amp; Data</a></li>
+        	<li><a href="all_in_one.php">All-In-One Rates</a></li>
+        	<li><a href="country_passes.php">Passes Rates</a></li>
     	</ul>
         <ul class="footer_nav_list">
     		<li><a href="#"><span>Lebara Money</span></a></li>
-       	 	<li><a href="#">Exchange Rates</a></li>
-       	 	<li><a href="#">Login</a></li>
-       	 	<li><a href="#">FAQs</a></li>
+       	 	<li><a href="https://www.lebara-money.com">Exchange Rates</a></li>
+       	 	<li><a href="https://www.lebara-money.com">Login</a></li>
+       	 	<li><a href="https://www.lebara-money.com/static/faq">FAQs</a></li>
         	<li><a href="#">Sign Up</a></li>
         	<li><a href="#">Promotions</a></li>
     	</ul>
