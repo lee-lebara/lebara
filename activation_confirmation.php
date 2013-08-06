@@ -25,16 +25,13 @@
 
 <div class="content_box mobile_element">
 <div class="confirmation_symbol"><img src="images/green_tick.jpg" alt="Green Tick" /></div>
-	<h2>Payment Information</h2>
-	<h3>Thank You!</h3>
-    <p>Your payment of &pound;10 has been added to your account and we have given you an additional credit of &pound;2.50</p>
+	<h3>Your Product Has Been Activated</h3>
+    <p>Your order number is xxxxxxxx. If you have any issues, please contact <a href="#">Customer Services</a>.</p>
     <div class="clear"></div>
 </div>
 
 <div class="content_box mobile_element">
-	<h2>Your current balance:</h2>
-	<div class="current_balance"><span>&pound;29.30</span> credit</div>
-    <div class="current_balance"><span>&pound;2.50</span> bonus (expires in xx days)</div>
+  <div class="wide_button blue mylebara_button"><a href="#"><span>View Your Lebara</span></a></div>
 </div>
 
 <div class="content_box mobile_element">
